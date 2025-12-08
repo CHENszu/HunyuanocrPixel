@@ -22,7 +22,8 @@ HunyuanOCR识别中基本上都是**按行**进行处理（经过测试HunyuanOC
 <img width="443" height="497" alt="图片" src="https://github.com/user-attachments/assets/7e9ca99f-1127-460e-962c-5a35d4c83f85" />
 <img width="437" height="493" alt="图片" src="https://github.com/user-attachments/assets/16989e9b-d9a6-4f83-bb2d-c1154ac9571d" />  
 我们将这个集成项目写了一个前端，大家在部署好HunyuanOCR和Cycle-CenterNet以及LORE就可以解决表格内文本换行的问题，同时带有文字和像素坐标的JSON：  
-<img width="1361" height="895" alt="图片" src="https://github.com/user-attachments/assets/9d823b48-c8a9-4a3e-b59a-194ae5c7ff2b" />  
+<img width="1309" height="492" alt="图片" src="https://github.com/user-attachments/assets/ccca53e5-397a-4b27-bb8e-ac311015a8b3" />  
+<img width="1296" height="910" alt="图片" src="https://github.com/user-attachments/assets/78ad9cf5-0d3e-48b3-b92b-9655e5e047f5" />  
 不过我们在测试过程中也发现了HunyuanOCR[坐标异常](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/65)的情况，不过对于一般的数据都还是没问题的。
 ## 3 代码重点介绍
 + HunyuanOCR在识别的时候会对图片进行变换，因此我们需要[逆变换](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/40)才能得到正确的坐标；
