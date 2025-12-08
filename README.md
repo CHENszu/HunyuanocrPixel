@@ -11,5 +11,7 @@ sudo docker run     -it     --rm     --gpus all     --network host     ccr-2vdh3
 <img width="143" height="73" alt="图片" src="https://github.com/user-attachments/assets/eec89a45-368a-4f10-80a8-fb7d5f6eb814" />  
 我们发现HunyuanOCR不仅能够通过自定义提示词，而且像素坐标是按照一个个文本进行返回，并且如果图片是倾斜的，其也能较为优秀的识别出来。
 ## 针对于同一表格内 文字换行 的解决方案
-我们在这里采用IoU合并的方法进行
+我们在这里采用[IoU](https://cloud.tencent.com/developer/article/1446244)合并的方法进行，如果文本的边框在表格边框内占据80%以上的面积，即可认为该文字属于这个表格。  
+那么接下来我们的任务就是如何去解析图片中的表格位置，我们在这里推荐通义实验室的[Cycle-CenterNet](https://www.modelscope.cn/models/iic/cv_dla34_table-structure-recognition_cycle-centernet)有线表格识别和[LORE](https://www.modelscope.cn/models/iic/cv_resnet-transformer_table-structure-recognition_lore)无限表格识别，当然我们也可以采用OpenCV来进行框线检测，不过针对不同的数据需要调整超参，不具备普适性。  
+
 
