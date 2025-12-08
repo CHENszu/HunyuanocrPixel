@@ -27,4 +27,5 @@ HunyuanOCR识别中基本上都是**按行**进行处理（经过测试HunyuanOC
 不过我们在测试过程中也发现了HunyuanOCR[坐标异常](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/65)的情况，不过对于一般的数据都还是没问题的。
 ## 3 代码重点介绍
 + HunyuanOCR在识别的时候会对图片进行变换，因此我们需要[逆变换](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/40)才能得到正确的坐标；
-+ 配置好环境后运行start.sh系统就正常运行了！
++ asyncio.create_task()异步操作，大大提升任务完成速度；
++ 替换ocr_service.py里面的模型路径，然后配置好环境后运行start.sh系统就正常运行了！
