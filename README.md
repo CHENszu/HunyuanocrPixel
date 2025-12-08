@@ -20,5 +20,5 @@ HunyuanOCR识别中基本上都是**按行**进行处理（经过测试HunyuanOC
 <img width="1361" height="895" alt="图片" src="https://github.com/user-attachments/assets/9d823b48-c8a9-4a3e-b59a-194ae5c7ff2b" />  
 不过我们在测试过程中也发现了PaddleOCR-VL[坐标异常](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/65)的情况，不过对于一般的数据都还是没问题的。
 ## 3 代码重点介绍
-+ HunyuanOCR在识别的时候会进行变换，因此我们需要[逆变换](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/40)才能得到正确的坐标；
++ HunyuanOCR在识别的时候会对图片进行变换，因此我们需要[逆变换](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/40)才能得到正确的坐标；
 + 
