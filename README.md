@@ -1,5 +1,5 @@
 # HunyuanocrPixel介绍
-由于项目需要，我们需要以JSON格式返回OCR识别的**文字**以及对应边框的**像素坐标**，我们尝试了[PaddleOCR-VL](https://www.modelscope.cn/models/PaddlePaddle/PaddleOCR-VL) [HunyuanOCR](https://github.com/Tencent-Hunyuan/HunyuanOCR) [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) [DeepseekOCR](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-OCR) mineru  monkeyocr dots.ocr nanonet.  
+由于项目需要，我们需要以JSON格式返回OCR识别的**文字**以及对应边框的**像素坐标**，我们尝试了[PaddleOCR-VL](https://www.modelscope.cn/models/PaddlePaddle/PaddleOCR-VL) [HunyuanOCR](https://github.com/Tencent-Hunyuan/HunyuanOCR) [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) [DeepseekOCR](https://www.modelscope.cn/models/deepseek-ai/DeepSeek-OCR) [mineru](https://www.modelscope.cn/models/OpenDataLab/MinerU2.5-2509-1.2B)  [monkeyocr](https://www.modelscope.cn/models/l1731396519/MonkeyOCR) [dots.ocr](https://www.modelscope.cn/models/rednote-hilab/dots.ocr) [nanonet](https://www.modelscope.cn/models/nanonets/Nanonets-OCR-s).  
 ## 1 遇到的困难
 由于我们的数据较为复杂：  
 1.PDF里面的图片一些是倾斜的；  
