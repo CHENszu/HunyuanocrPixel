@@ -20,7 +20,7 @@ HunyuanOCR识别中基本上都是**按行**进行处理（经过测试HunyuanOC
 那么接下来我们的任务就是如何去解析图片中的表格位置，我们在这里推荐通义实验室的[Cycle-CenterNet](https://www.modelscope.cn/models/iic/cv_dla34_table-structure-recognition_cycle-centernet)有线表格识别和[LORE](https://www.modelscope.cn/models/iic/cv_resnet-transformer_table-structure-recognition_lore)无限表格识别，当然我们也可以采用OpenCV来进行框线检测，不过针对不同的数据需要调整超参，不具备普适性。  
 在这里给大家展示一下Hunyuanocr和HunyuanocrPixel区别：  
 <img width="443" height="497" alt="图片" src="https://github.com/user-attachments/assets/7e9ca99f-1127-460e-962c-5a35d4c83f85" />
-<img width="437" height="493" alt="图片" src="https://github.com/user-attachments/assets/16989e9b-d9a6-4f83-bb2d-c1154ac9571d" />
+<img width="437" height="493" alt="图片" src="https://github.com/user-attachments/assets/16989e9b-d9a6-4f83-bb2d-c1154ac9571d" />  
 我们将这个集成项目写了一个前端，大家在部署好HunyuanOCR和Cycle-CenterNet以及LORE就可以解决表格内文本换行的问题，同时带有文字和像素坐标的JSON：  
 <img width="1361" height="895" alt="图片" src="https://github.com/user-attachments/assets/9d823b48-c8a9-4a3e-b59a-194ae5c7ff2b" />  
 不过我们在测试过程中也发现了HunyuanOCR[坐标异常](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/65)的情况，不过对于一般的数据都还是没问题的。
