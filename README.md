@@ -3,7 +3,7 @@
 ## 1 遇到的困难
 由于我们的数据较为复杂：1.PDF里面的图片一些是歪的；2.表格里面的文本会换行：  
 <img width="65" height="127" alt="图片" src="https://github.com/user-attachments/assets/802dd289-a13d-4f65-9ae1-fde951f696d1" />  
-经过多个模型的测试，我们发现PaddleOCR-VL的识别效果是最好的，并且对于内存的要求是最低的，我们可以通过docker一行命令进行[部署](https://www.paddleocr.ai/latest/version3.x/pipeline_usage/PaddleOCR-VL.html#22-python)：  
+经过多个模型的测试，我们发现PaddleOCR-VL的识别效果是最好的，并且对于内存的要求是最低的，如果您只需要文本信息，可以通过docker一行命令进行[部署](https://www.paddleocr.ai/latest/version3.x/pipeline_usage/PaddleOCR-VL.html#22-python)：  
   
 sudo docker run     -it     --rm     --gpus all     --network host     ccr-2vdh3abv-pub.cnc.bj.baidubce.com/paddlepaddle/paddleocr-genai-vllm-server:latest     paddleocr genai_server --model_name PaddleOCR-VL-0.9B --host 0.0.0.0 --port 8118 --backend vllm  
   
