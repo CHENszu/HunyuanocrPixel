@@ -16,9 +16,9 @@ HunyuanOCR识别中基本上都是**按行**进行处理（经过测试HunyuanOC
 ## 2 针对于同一表格内 文字换行 的解决方案
 我们在这里采用[IoU](https://cloud.tencent.com/developer/article/1446244)合并的方法进行，如果文本的边框在表格边框内占据80%以上的面积，即可认为该文字属于这个表格。  
 那么接下来我们的任务就是如何去解析图片中的表格位置，我们在这里推荐通义实验室的[Cycle-CenterNet](https://www.modelscope.cn/models/iic/cv_dla34_table-structure-recognition_cycle-centernet)有线表格识别和[LORE](https://www.modelscope.cn/models/iic/cv_resnet-transformer_table-structure-recognition_lore)无限表格识别，当然我们也可以采用OpenCV来进行框线检测，不过针对不同的数据需要调整超参，不具备普适性。  
-我们将这个集成项目写了一个前端，大家在部署好PaddleOCR-VL和Cycle-CenterNet以及LORE就可以解决表格内文本换行的问题，同时带有文字和像素坐标的JSON：  
+我们将这个集成项目写了一个前端，大家在部署好HunyuanOCR和Cycle-CenterNet以及LORE就可以解决表格内文本换行的问题，同时带有文字和像素坐标的JSON：  
 <img width="1361" height="895" alt="图片" src="https://github.com/user-attachments/assets/9d823b48-c8a9-4a3e-b59a-194ae5c7ff2b" />  
-不过我们在测试过程中也发现了PaddleOCR-VL[坐标异常](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/65)的情况，不过对于一般的数据都还是没问题的。
+不过我们在测试过程中也发现了HunyuanOCR[坐标异常](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/65)的情况，不过对于一般的数据都还是没问题的。
 ## 3 代码重点介绍
 + HunyuanOCR在识别的时候会对图片进行变换，因此我们需要[逆变换](https://github.com/Tencent-Hunyuan/HunyuanOCR/issues/40)才能得到正确的坐标；
 + 
